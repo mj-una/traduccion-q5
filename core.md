@@ -11,15 +11,13 @@ En estas páginas de "Aprender" puedes experimentar editando los mini ejemplos. 
 
 
 
-## draw()  
-dibujar()
+## draw() <br> dibujar()
 
 Función a declarar. Se ejecutará 60 veces por segundo de forma predeterminada. Tiene comportamiento de bucle, lo que permite hacer animaciones cuadro a cuadro.
 
 
 
-## setup()  
-iniciar()
+## setup() <br> iniciar()
 
 Función a declarar. Se ejecutará una sola vez, al principio del sketch. Sirve para las configuraciones generales o dibujar un cuadro estático.
 
@@ -27,8 +25,7 @@ Puede declararse como función asíncrona y usarse para cargar recursos (ver eje
 
 
 
-## preload()  
-precargar()
+## preload() <br> precargar()
 
 Función a declarar. Se ejecutará por completo antes del inicio. Sirve para agrupar la carga de recursos (imagenes, sonidos, fuentes, etc) asegurándose de que queden listos para usarse.
 
@@ -36,88 +33,79 @@ Sin declarar un `preload` se puede lograr el mismo comportamiento si se crea el 
 
 
 
-## frameCount  
-cuadroActual
+## frameCount <br> cuadroActual
 
 Número del cuadro actual, es decir, la cantidad de cuadros que se han dibujado desde que se inició el sketch.
 
 
 
-## noLoop()  
-pausar()
+## noLoop() <br> pausar()
 
 Detiene el bucle de dibujo.
 
 
 
-## redraw(n)  
-redibujar(n)
+## redraw(n) <br> redibujar(n)
 
 Dibuja el lienzo `n` veces. Si no recibe parametro, se dibuja una sola vez. Útil para controlar animaciones con el bucle pausado.
 
 **Parámetros**
-- `n` <number> (opcional) - cantidad de veces que se volverá a dibujar el lienzo. Por defecto es 1.
+- `n` `<number>` (opcional) - cantidad de veces que se volverá a dibujar el lienzo. Por defecto es 1.
 
 
 
-## loop()  
-reanudar()
+## loop() <br> reanudar()
 
 Vuelve a activar el bucle de dibujo en caso de que estuviera pausado.
 
 
 
-## frameRate(hz)  
-frecuencia(hz)
+## frameRate(hz) <br> frecuencia(hz)
 
 Si recibe un parámetro, establece la cantidad ideal de cuadros que se intentarán dibujar por cada segundo (es decir, la tasa de refresco, la frecuencia del bucle).
 
 Retorna la frecuencia real alcanzada durante el último segundo de ejecución. Incluso si nunca se modifica explícitamente la frecuencia, el valor real suele fluctuar entre el ideal y 0. Para un mejor análisis del rendimiento usar las herramientas del navegador (DevTools).
 
 **Parámetros**
-- `hz` <number> (opcional) - cantidad ideal de cuadros a dibujar en un segundo. Por defecto es 60.
+- `hz` `<number>` (opcional) - cantidad ideal de cuadros a dibujar en un segundo. Por defecto es 60.
 
 **Retorno**
-- <number> - frecuencia real del bucle en el último segundo.
+- `<number>` - frecuencia real del bucle en el último segundo.
 
 
 
-## getTargetFrameRate()  
-frecuenciaIdeal()
+## getTargetFrameRate() <br> frecuenciaIdeal()
 
 Retorna la cantidad ideal de cuadros que se intentan dibujar por segundo.
 
 **Retorno**
-- <number> - cantidad ideal de fotogramas por segundo.
+- `<number>` - cantidad ideal de fotogramas por segundo.
 
 
 
-## getFPS()  
-frecuenciaMaxima()
+## getFPS() <br> frecuenciaMaxima()
 
 Retorna la cantidad maxima de cuadros que se podrían estar dibujando en cada segundo.
 
 Es un valor teórico que depende del estado del dispositivo. Para un mejor análisis del rendimiento usar las herramientas del navegador (DevTools).
 
 **Retorno**
-- <number> - cantidad máxima teorica de cuadros por segundo.
+- `<number>` - cantidad máxima teorica de cuadros por segundo.
 
 
 
-## log(message)  
-log(mensaje)
+## log(message) <br> log(mensaje)
 
 Imprime un mensaje en la consola de JavaScript. Atajo para `console.log()`.
 
 Para acceder a las herramientas del navegador (DevTools) generalmente es con click derecho + "inspeccionar", o presionando las teclas `ctrl + shift + i` o `command + option + i`. La consola se encuentra en la pestaña "console".
 
 **Parámetros**
-- `mensaje` <any> - mensaje a imprimir.
+- `mensaje` `<any>` - mensaje a imprimir.
 
 
 
-## postProcess()  
-retocarDibujo()
+## postProcess() <br> retocarDibujo()
 
 Funcion a declarar. Se ejecuta después de cada llamada a `dibujar` y de los `hooks de dibujo`, pero antes de dibujar realmente el lienzo.
 
@@ -125,22 +113,19 @@ Funcion a declarar. Se ejecuta después de cada llamada a `dibujar` y de los `ho
 
 
 
-## windowWidth  
-anchoVentana
+## windowWidth <br> anchoVentana
 
 El ancho de la ventana (cantidad de píxeles). Atajo para `window.innerWidth`.
 
 
 
-## windowHeight  
-altoVentana
+## windowHeight <br> altoVentana
 
 El alto de la ventana (cantidad de píxeles). Atajo para `window.innerHeight`.
 
 
 
-## deltaTime  
-ultimoTiempo
+## deltaTime <br> ultimoTiempo
 
 Milisegundos que han pasado desde el último cuadro dibujado. Con la frecuencia por defecto a 60 hz, el tiempo aproximado es 16.6 ms o mas.
 
@@ -148,8 +133,7 @@ Milisegundos que han pasado desde el último cuadro dibujado. Con la frecuencia 
 
 
 
-## usePromiseLoading(val)  
-usarPromesas(bandera)
+## usePromiseLoading(val) <br> usarPromesas(bandera)
 
 Permite decidir si las funciones de carga (`loadImage`, `loadFont`, etc) retornan promesas o una referencia al recurso por cargar.
 
@@ -159,7 +143,7 @@ se retornan promesas (para que puedan ser operadas con `await` o `Promise.all`).
 El diseño interno de q5 permite que esto se pueda modificar dinámicamente durante la ejecución del sketch. 
 
 **Parámetros**
-- `bandera` <boolean> (opcional) - Indica si las funciones `load*` deben devolver promesas o no. Por defecto es `true`.
+- `bandera` `<boolean>` (opcional) - Indica si las funciones `load*` deben devolver promesas o no. Por defecto es `true`.
 
 
 
